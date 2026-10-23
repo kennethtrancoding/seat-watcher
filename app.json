@@ -1,0 +1,79 @@
+{
+	"expo": {
+		"name": "Seat Watcher",
+		"slug": "cac-app-2026",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"userInterfaceStyle": "light",
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "com.kennethtran.carseatmonitor",
+			"appleTeamId": "J79DS9W9J4",
+			"infoPlist": {
+				"UIBackgroundModes": ["bluetooth-central"],
+				"CFBundleAllowMixedLocalizations": true
+			}
+		},
+		"locales": {
+			"es": "./locales/es.json"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"backgroundColor": "#181818"
+			},
+			"predictiveBackGestureEnabled": false,
+			"permissions": [
+				"android.permission.BLUETOOTH",
+				"android.permission.BLUETOOTH_ADMIN",
+				"android.permission.BLUETOOTH_CONNECT",
+				"android.permission.ACCESS_COARSE_LOCATION",
+				"android.permission.ACCESS_FINE_LOCATION"
+			],
+			"package": "com.cacapp2026.carseatmonitor"
+		},
+		"plugins": [
+			["./plugins/withSvgIcon", { "svg": "./assets/icon.svg" }],
+			"expo-router",
+			"expo-status-bar",
+			[
+				"react-native-ble-manager",
+				{
+					"bluetoothAlwaysPermission": "Seat Watcher uses Bluetooth to hear from your car seat (how warm it is and if someone's in it), even when the app is closed."
+				}
+			],
+			[
+				"expo-location",
+				{
+					"locationWhenInUsePermission": "Seat Watcher saves where you are while you're connected to the car seat, so after an alert you can find the seat or share where it is.",
+					"locationAlwaysAndWhenInUsePermission": "Seat Watcher saves where you are while you're connected to the car seat, even when your phone is locked, so after an alert you can find the seat or share where it is."
+				}
+			],
+			[
+				"expo-image-picker",
+				{
+					"photosPermission": "Seat Watcher uses your photos so you can add a picture of your little one.",
+					"cameraPermission": "Seat Watcher uses the camera so you can snap a picture of your little one.",
+					"microphonePermission": false
+				}
+			],
+			"./plugins/withoutPushEntitlement",
+			"./plugins/withCriticalAlerts",
+			"./plugins/withSceneLifecycle",
+			"expo-font",
+			[
+				"expo-localization",
+				{
+					"supportedLocales": {
+						"ios": ["en", "es"],
+						"android": ["en", "es"]
+					}
+				}
+			]
+		],
+		"scheme": "carseatmonitor",
+		"extra": {
+			"supportPhoneNumber": "",
+			"criticalAlerts": false
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"ios": {
+		"NSBluetoothAlwaysUsageDescription": "Seat Watcher usa Bluetooth para recibir datos de tu asiento de seguridad (qué tan caliente está y si hay alguien en él), incluso cuando la app está cerrada.",
+		"NSLocationWhenInUseUsageDescription": "Seat Watcher guarda dónde estás mientras hay conexión con el asiento de seguridad, para que después de una alerta puedas encontrar el asiento o compartir dónde está.",
+		"NSLocationAlwaysAndWhenInUseUsageDescription": "Seat Watcher guarda dónde estás mientras hay conexión con el asiento de seguridad, incluso con el teléfono bloqueado, para que después de una alerta puedas encontrar el asiento o compartir dónde está.",
+		"NSPhotoLibraryUsageDescription": "Seat Watcher usa tus fotos para que puedas agregar una foto de tu bebé.",
+		"NSCameraUsageDescription": "Seat Watcher usa la cámara para que puedas tomarle una foto a tu bebé."
+	}
+}
